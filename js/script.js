@@ -9,8 +9,8 @@ function mostrar_mensaje(titulo, texto_mensaje)
 
 function agregar_anotacion()
 {
-    var inp_txt_anot_nueva = document.getElementById("txt_anot_nueva");
-    var txt_anot_nueva = inp_txt_anot_nueva.value;
+    let inp_txt_anot_nueva = document.getElementById("txt_anot_nueva");
+    let txt_anot_nueva = inp_txt_anot_nueva.value;
     if(txt_anot_nueva == "") {
         mostrar_mensaje("Error", "La anotación debe contener algún texto.");
         return;
@@ -18,7 +18,7 @@ function agregar_anotacion()
 
     cnt_anotaciones += 1;
 
-    var html_fila_anotacion = $("#plantilla_fila_anot").html();
+    let html_fila_anotacion = $("#plantilla_fila_anot").html();
     html_fila_anotacion = html_fila_anotacion.replace("id_anotacion_reemplazar", "anotacion" + cnt_anotaciones);
     html_fila_anotacion = html_fila_anotacion.replace("texto_anotacion_reemplazar", txt_anot_nueva);
     $("#filas_anotaciones").append("<tr id='anotacion" + cnt_anotaciones + "'>" + html_fila_anotacion + "</tr>");
@@ -36,6 +36,6 @@ function eliminar_anotacion(id_anotacion)
 function mostrar_creditos()
 {
 
-    mostrar_mensaje("Créditos", "2023, Fernando Nadal Testa.")
+    mostrar_mensaje("Créditos", "2023, Fernando Nadal Testa. Foto generada en https://stablediffusionweb.com.")
 
 }
