@@ -4,22 +4,387 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            position: relative; 
+        }
+        .affix {
+            top:0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+        .encabezado {
+            color: #FCFFE7;
+            background-color: #2B3467;
+        }
+        .navbar {
+            margin-bottom: 0px;
+            color: #FCFFE7;
+            background-color: #BAD7E9;
+        }
+        a {
+            color: #FCFFE7;
+        }
+        h3 {
+            color: #EB455F;
+        }
+        h3.anotaciones {
+            background-color: #EB455F;
+            color: #FCFFE7;
+        }
+        .affix ~ .container-fluid {
+            position: relative;
+            top: 50px;
+        }
+        footer {
+            padding-right: 20px;
+            color: #FCFFE7;
+            background-color: #BAD7E9;
+        }
+        .modal {
+            margin-top: 50px;
+        }
+    </style>
     <title>Curriculum Vitae</title>
 </head>
-<body>
-    <title>
-        <h1>Curriculum Vitae</h1>
-    </title>
-    
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
+
+    <!--
+        Encabezado
+    -->
+    <header class="encabezado container-fluid">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><img src="Foto.jpg" class="img-rounded" alt="Foto facial de Sir Kirk Flamingham" width="128px"></td>
+                    <td>
+                        <h2 class="text-right"><u>Curriculum Vitae</u></h2>
+                        <h1 class="text-right">Sir Kirk Flamingham</h1>
+                        <h4 class="text-right"><i>2023</i></h4>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
+
+    <!--
+        Barra de navegación
+    -->
+    <nav class="navbar" data-spy="affix" data-offset-top="150">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <span class="navbar-brand" href="#"><b>Secciones</b></span>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#sec_info_personal" data-toggle="collapse" data-target="#myNavbar">Información personal</a></li>
+                    <li><a href="#sec_formacion" data-toggle="collapse" data-target="#myNavbar">Formación</a></li>
+                    <li><a href="#sec_laboral" data-toggle="collapse" data-target="#myNavbar">Laboral</a></li>
+                    <li><a href="#sec_trabs_presentados" data-toggle="collapse" data-target="#myNavbar">Trabajos presentados</a></li>
+                    <li><a href="#sec_cursos" data-toggle="collapse" data-target="#myNavbar">Cursos</a></li>
+                    <li><a href="#sec_anotaciones" data-toggle="collapse" data-target="#myNavbar">Anotaciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <main>
-        <h2>Sir Kirk Flamingham</h2>
+
+        <!--
+            Sección Información personal
+        -->
+        <div id="sec_info_personal" class="container-fluid">
+            <h3>Información personal</h3>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td>Nombre completo</td>
+                        <td>Sir Kirk Flamingham</td>
+                    </tr>
+                    <tr>
+                        <td>DNI</td>
+                        <td>95.000.111</td>
+                    </tr>
+                    <tr>
+                        <td>Edad</td>
+                        <td>41 años</td>
+                    </tr>
+                    <tr>
+                        <td>Domicilio</td>
+                        <td>Calle De Mi Casa 123</td>
+                    </tr>
+                    <tr>
+                        <td>Teléfonos</td>
+                        <td>3815550000<br>3819995555</td>
+                    </tr>
+                    <tr>
+                        <td>Correo electrónico</td>
+                        <td>skflamingham@mail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <!--
+            Sección Formación
+        -->
+        <div id="sec_formacion" class="container-fluid">
+            <h3>Formación</h3>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td>Posgrado</td>
+                        <td>
+                            <p><b>Residencia de Psiquiatría</b><br>Resolución Nº 04/DGR-XX. Duración: 4 años. Puntaje final promedio: 9,66.</p>
+                            <p><b>Homeopatía</b><br> Curso Superior de Homeopatía para Médicos. Fundación Homeopática. Resolución Nº 0XX/DG-0X. Duración: 3 años.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Universitario</td>
+                        <td>
+                            <p><b>Título de grado de medicina</b><br>Facultad de Medicina. Promedio final: 7,98</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Inglés</td>
+                        <td>
+                            <p><b>Curso Superior de Capacidad en Idioma Inglés</b><br>Duración: 9 años. Promedio final: 8,65</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Informática</td>
+                        <td>
+                            <p><b>Sistemas operativos</b><br>Linux<br>Microsoft Windows</p>
+                            <p><b>Internet</b><br>Uso de motores de búsqueda.</p>
+                            <p><b>Lengajes de programación</b><br>Python<br>Javascript</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!--
+            Sección Laboral
+        -->
+        <div id="sec_laboral" class="container-fluid">
+            <h3>Laboral</h3>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td>Guardias médicas generales</td>
+                        <td>
+                            <p><b>Hospital Verde</b><br>Guardia médica semanal de 24 horas. Ministerio de Salud. Duración: 5 años.</p>
+                            <p><b>Hospital Rojo</b><br>Reemplazo de cargo vacante de guardia médica de 24 horas. Duración: 20 meses.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Guardias psiquiátricas</td>
+                        <td>
+                            <p><b>Sanatorio Azul</b><br>Guardia médica semanal de 24 horas. Duración: 2 años.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Consultorio particular</td>
+                        <td>
+                            <p><b>Centro Médico Marrón</b><br>Atención de pacientes por consultorio ambulatorio en las especialidades Homeopatía y Psiquiatría.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--
+            Sección Trabajos Presentados
+        -->
+        <div id="sec_trabs_presentados" class="container-fluid">
+            <h3>Trabajos presentados</h3>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td>Sistemas complejos y relación médico-paciente</td>
+                        <td>
+                            <p>Autor. Conferencia Argentina. Ciudad Uno, Argentina. Noviembre de 2007.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Abordaje del suicidio en dispositivo de guardia de hospital general</td>
+                        <td>
+                            <p>Expositor. Jornadas de Profesionales en Formación en Salud Mental. 21 al 23 de marzo de 2013.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jornadas de Atención Integral de los Trastornos de la Conducta Alimentaria</td>
+                        <td>
+                            <p>Disertante. 30 de junio y 1 de julio de 2016.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--
+            Sección Cursos
+        -->
+        <div id="sec_cursos" class="container-fluid">
+            <h3>Cursos</h3>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td>Introducción a la Neuropsicología</td>
+                        <td>
+                            <p>Cátedra de Neurociencias, Facultad de Medicina. 45 horas teóricas. Calificación: 7.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Actualizaciones en Suicidios</td>
+                        <td>
+                            <p>Organizado por la Cátedra de Salud Mental II, Facultad de Medicina. Teórico. 10 horas cátedra.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Herramientas Grupales Para el Trabajo Clínico</td>
+                        <td>
+                            <p>Cátedra de Orientación Vocacional, Secretaría de Extensión de la Facultad de Psicología. 20 horas.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Detección de Deterioro Cognitivo en APS</td>
+                        <td>
+                            <p>Curso de formación dictado por Dirección Nacional de Salud Mental y Adicciones. Examen final, aprobado.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--
+            Sección Anotaciones
+        -->
+        <div id="sec_anotaciones" class="container-fluid">
+            <h3 class="anotaciones">Anotaciones</h3>
+            <table class="table table-striped">
+                <tbody id="filas_anotaciones">
+                    <tr>
+                        <td>
+                            <button onclick="agregar_anotacion()">
+                                <span class="glyphicon glyphicon-plus-sign"></span> Nueva
+                            </button>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="txt_anot_nueva">
+                        </td>
+                    </tr>
+                    <tr id="plantilla_fila_anot" style="display: none;">
+                        <td>
+                            <span class="glyphicon glyphicon-tag"></span>
+                        </td>
+                        <td>
+                            <button onclick="eliminar_anotacion(id_anotacion_reemplazar)"><span class="glyphicon glyphicon-minus-sign"></span></button>
+                            texto_anotacion_reemplazar
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </main>
 
+    <!--
+        Pie de página
+    -->
     <footer>
-        <h6>2023</h6>
+        <p class="text-right">
+            <i>
+                Documento del proyecto final<br>
+                del curso "Primeros pasos del desarrollo frontend"<br>
+                Argentina Programa 4.0
+            </i>
+            <p class="text-right">
+                <button onclick="mostrar_creditos()" style="background-color: #2B3467; margin-bottom: 10px;">créditos</button>
+            </p>
+    
+        </p>
     </footer>
 
+    <!--
+        Mensaje (modal)
+    -->
+    <div id="modalMsj" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title" id="txt_titulo_msj"></h3>
+            </div>
+            <div class="modal-body">
+            <p id="txt_mensaje"></p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+            </div>
+        </div>
+    
+        </div>
+    </div>
+
+    <!--
+        Script
+    -->
     <script>
+
+        var cnt_anotaciones = 0;
+
+        function mostrar_mensaje(titulo, texto_mensaje)
+        {
+            $("#txt_titulo_msj").html(titulo);
+            $("#txt_mensaje").html(texto_mensaje);
+            $("#modalMsj").modal();
+        }
+
+        function agregar_anotacion()
+        {
+            var inp_txt_anot_nueva = document.getElementById("txt_anot_nueva");
+            var txt_anot_nueva = inp_txt_anot_nueva.value;
+            if(txt_anot_nueva == "") {
+                mostrar_mensaje("Error", "La anotación debe contener algún texto.");
+                return;
+            }
+
+            cnt_anotaciones += 1;
+
+            var html_fila_anotacion = $("#plantilla_fila_anot").html();
+            html_fila_anotacion = html_fila_anotacion.replace("id_anotacion_reemplazar", "anotacion" + cnt_anotaciones);
+            html_fila_anotacion = html_fila_anotacion.replace("texto_anotacion_reemplazar", txt_anot_nueva);
+            $("#filas_anotaciones").append("<tr id='anotacion" + cnt_anotaciones + "'>" + html_fila_anotacion + "</tr>");
+
+            inp_txt_anot_nueva.value = "";
+        }
+
+        function eliminar_anotacion(id_anotacion)
+        {
+
+            $(id_anotacion).remove();
+
+        }
+
+        function mostrar_creditos()
+        {
+
+            mostrar_mensaje("Créditos", "2023, Fernando Nadal Testa.")
+
+        }
 
     </script>
 
