@@ -5,56 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            position: relative; 
-        }
-        .affix {
-            top:0;
-            width: 100%;
-            z-index: 9999 !important;
-        }
-        .encabezado {
-            color: #FCFFE7;
-            background-color: #2B3467;
-        }
-        .navbar {
-            margin-bottom: 0px;
-            color: #FCFFE7;
-            background-color: #BAD7E9;
-        }
-        a {
-            color: #FCFFE7;
-        }
-        h1 {
-            font-size: x-large
-        }
-        h3 {
-            color: #EB455F;
-        }
-        h3.anotaciones {
-            background-color: #EB455F;
-            color: #FCFFE7;
-        }
-        .affix ~ .container-fluid {
-            position: relative;
-            top: 50px;
-        }
-        footer {
-            padding-right: 20px;
-            color: #FCFFE7;
-            background-color: #BAD7E9;
-        }
-        .modal {
-            margin-top: 50px;
-        }
-    </style>
     <title>Curriculum Vitae</title>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -345,51 +301,7 @@
     <!--
         Script
     -->
-    <script>
-
-        var cnt_anotaciones = 0;
-
-        function mostrar_mensaje(titulo, texto_mensaje)
-        {
-            $("#txt_titulo_msj").html(titulo);
-            $("#txt_mensaje").html(texto_mensaje);
-            $("#modalMsj").modal();
-        }
-
-        function agregar_anotacion()
-        {
-            var inp_txt_anot_nueva = document.getElementById("txt_anot_nueva");
-            var txt_anot_nueva = inp_txt_anot_nueva.value;
-            if(txt_anot_nueva == "") {
-                mostrar_mensaje("Error", "La anotación debe contener algún texto.");
-                return;
-            }
-
-            cnt_anotaciones += 1;
-
-            var html_fila_anotacion = $("#plantilla_fila_anot").html();
-            html_fila_anotacion = html_fila_anotacion.replace("id_anotacion_reemplazar", "anotacion" + cnt_anotaciones);
-            html_fila_anotacion = html_fila_anotacion.replace("texto_anotacion_reemplazar", txt_anot_nueva);
-            $("#filas_anotaciones").append("<tr id='anotacion" + cnt_anotaciones + "'>" + html_fila_anotacion + "</tr>");
-
-            inp_txt_anot_nueva.value = "";
-        }
-
-        function eliminar_anotacion(id_anotacion)
-        {
-
-            $(id_anotacion).remove();
-
-        }
-
-        function mostrar_creditos()
-        {
-
-            mostrar_mensaje("Créditos", "2023, Fernando Nadal Testa.")
-
-        }
-
-    </script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>

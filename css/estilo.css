@@ -1,0 +1,43 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative; 
+}
+.affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+.encabezado {
+    color: #FCFFE7;
+    background-color: #2B3467;
+}
+.navbar {
+    margin-bottom: 0px;
+    color: #FCFFE7;
+    background-color: #BAD7E9;
+}
+a {
+    color: #FCFFE7;
+}
+h1 {
+    font-size: x-large
+}
+h3 {
+    color: #EB455F;
+}
+h3.anotaciones {
+    background-color: #EB455F;
+    color: #FCFFE7;
+}
+.affix ~ .container-fluid {
+    position: relative;
+    top: 50px;
+}
+footer {
+    padding-right: 20px;
+    color: #FCFFE7;
+    background-color: #BAD7E9;
+}
+.modal {
+    margin-top: 50px;
+}
